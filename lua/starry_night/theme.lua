@@ -1,10 +1,15 @@
-local c = require("starry_night.colors").dark
+local c = require("starry_night.colors")
 
 local hl = vim.api.nvim_set_hl
 local theme = {}
 
-theme.set_highlights = function()
+theme.set_highlights = function(color)
 
+  if color == "dark" then
+    c = c.dark
+  elseif color == "light" then
+    c = c.light
+  end
 --------------------------------------------------------
 ----- Editor -------------------------------------------
 --------------------------------------------------------
