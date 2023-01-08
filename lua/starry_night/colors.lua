@@ -28,7 +28,7 @@ M.light =
   warn    = "#f89975",
   hint    = "#ac7d88",
   info    = "#898aa6",
-  preproc = "#ab4546",
+  preproc = "#cc8f90",
   comment = "#a9c2ac",
 
 }
