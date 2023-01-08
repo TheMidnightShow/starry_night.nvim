@@ -1,9 +1,10 @@
-local c = require("starry_night.colors")
+local colors = require("starry_night.colors")
 
 local hl = vim.api.nvim_set_hl
 local theme = {}
 
 theme.set_highlights = function(color)
+  local c
 
   if color == "dark" then
     c = c.dark
@@ -526,12 +527,12 @@ theme.set_highlights = function(color)
   hl(0, "GpsItemKindTypeParameter", { fg = c.info, bg = 'NONE' })
 
   -- Packer
-  hl(0, "packerString", { fg = c.hint, bg = 'NONE' })
-  hl(0, "packerHash", { fg = c.preproc, bg = 'NONE' })
-  hl(0, "packerOutput", { fg = c.preproc, bg = 'NONE' })
-  hl(0, "packerRelDate", { fg = c.hint, bg = 'NONE' })
-  hl(0, "packerSuccess", { fg = c.success_green, bg = 'NONE' })
-  hl(0, "packerStatusSuccess", { fg = c.preproc, bg = 'NONE' })
+  hl(0, "packerString", { fg = c.hint, bg = c.bg })
+  hl(0, "packerHash", { fg = c.preproc, bg = c.bg })
+  hl(0, "packerOutput", { fg = c.preproc, bg = c.bg })
+  hl(0, "packerRelDate", { fg = c.hint, bg = c.bg })
+  hl(0, "packerSuccess", { fg = c.info, bg = c.bg })
+  hl(0, "packerStatusSuccess", { fg = c.preproc, bg = c.bg })
 
   -- SymbolOutline
   hl(0, "SymbolsOutlineConnector", { fg = c.hint, bg = 'NONE' })
