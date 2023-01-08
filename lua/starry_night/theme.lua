@@ -5,11 +5,10 @@ local theme = {}
 
 theme.set_highlights = function(color)
   local c
-
   if color == "dark" then
-    c = c.dark
+    c = colors.dark
   elseif color == "light" then
-    c = c.light
+    c = colors.light
   end
 --------------------------------------------------------
 ----- Editor -------------------------------------------
