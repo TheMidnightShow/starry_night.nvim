@@ -1,4 +1,1 @@
-lua << EOF
-  local starry_night = require("starry_night") 
-  starry_night.setup()
-EOF
+require("starry_night")
