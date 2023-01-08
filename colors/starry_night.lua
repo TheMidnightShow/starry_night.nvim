@@ -1,1 +1,1 @@
-require("starry_night")
+require("starry_night").setup()
