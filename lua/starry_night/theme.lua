@@ -5,8 +5,8 @@ local M = {}
 M.set_highlights = function(color)
   local c
   if color == "dark" then
-    c = colors.dark 
-  elseif
+    c = colors.dark
+  elseif color == "light" then
     c = colors.light
   end
 --------------------------------------------------------
