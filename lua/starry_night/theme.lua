@@ -1,15 +1,8 @@
-local colors = require("starry_night.colors")
-
 local hl = vim.api.nvim_set_hl
-local theme = {}
+local M = {}
 
-theme.set_highlights = function(color)
-  local c
-  if color == "dark" then
-    c = colors.dark
-  elseif color == "light" then
-    c = colors.light
-  end
+M.set_highlights = function(color)
+  local c = require("starry_night.colors").color
 --------------------------------------------------------
 ----- Editor -------------------------------------------
 --------------------------------------------------------
@@ -410,6 +403,12 @@ theme.set_highlights = function(color)
   hl(0, "IndentBlanklineContextChar", { fg = c.info, bg = 'NONE' })
   hl(0, "IndentBlanklineContextStart", { fg = 'NONE', bg = 'NONE', underline=true, })
   hl(0, "IndentBlanklineChar", { fg = c.alt, bg = 'NONE' })
+  hl(0, "IndentBlanklineIndent1", { fg = c.fg, bg = 'NONE' })
+  hl(0, "IndentBlanklineIndent2", { fg = c.fg, bg = 'NONE' })
+  hl(0, "IndentBlanklineIndent3", { fg = c.fg, bg = 'NONE' })
+  hl(0, "IndentBlanklineIndent4", { fg = c.fg, bg = 'NONE' })
+  hl(0, "IndentBlanklineIndent5", { fg = c.fg, bg = 'NONE' })
+  hl(0, "IndentBlanklineIndent6", { fg = c.fg, bg = 'NONE' })
 
   -- Dashboard
   hl(0, "DashboardHeader", { fg = c.preproc, bg = 'NONE' })
@@ -633,4 +632,4 @@ theme.set_highlights = function(color)
   hl(0, "tomlTSProperty", { fg = c.preproc, bg = 'NONE' })
 end
 
-return theme
+return M 
