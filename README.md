@@ -1,9 +1,20 @@
 # Starry_Night.Nvim
 
 ## [🗒] about
-- simple colorscheme designed for starry.nvim
+- cozy low contrast colorscheme for neovim mainly designed for the starry.nvim project
 
 ## [⚙️] features
+- dark & light theme
+- low contrast
+- pluggin support
+
+## [🔌] support
+- [toggleterm](https://github.com/akinsho/toggleterm.nvim)
+- [telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+- [lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [alpha](https://github.com/goolord/alpha-nvim)
+- [cmp](https://github.com/knubie/nvim-cmp)
 
 ## [📦] installation
 ```lua
@@ -27,3 +38,4 @@ vim.cmd('colorscheme starry_nova')
 
 ### starry_nova
 ![nebula](screenshots/nova_edit.png)
+
