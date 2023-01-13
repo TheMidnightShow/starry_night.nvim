@@ -4,11 +4,7 @@ local theme = require('starry_night.theme')
 M.setup = function(color)
   vim.cmd('hi clear')
 
-  if color == "dark" then
-    vim.o.background = 'dark'
-  elseif color == "light" then
-    vim.o.background = 'light'
-  end
+  vim.o.background = color 
 
   if vim.fn.exists('syntax_on') then
     vim.cmd('syntax reset')

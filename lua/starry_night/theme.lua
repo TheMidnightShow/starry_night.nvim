@@ -1,13 +1,15 @@
-local colors = require("starry_night.colors")
-local hl = vim.api.nvim_set_hl
-local M = {}
+local c = require("starry_night.colors")
 
-M.set_highlights = function(color)
+local hl = vim.api.nvim_set_hl
+local theme = {}
+
+theme.set_highlights = function(color)
+
   local c
   if color == "dark" then
-    c = colors.dark
+    c = c.dark
   elseif color == "light" then
-    c = colors.light
+    c = c.light
   end
 --------------------------------------------------------
 ----- Editor -------------------------------------------
@@ -273,8 +275,8 @@ M.set_highlights = function(color)
   hl(0, "DiagnosticHint", { fg = c.preproc, bg = c.bg })
   hl(0, "DiagnosticInfo", { fg = c.info, bg = c.bg })
   hl(0, "DiagnosticWarn", { fg = c.err, bg = c.bg })
-  hl(0, "DiagnosticError", { fg = c.err, bg = c.bg })
-  hl(0, "DiagnosticOther", { fg = c.preproc, bg = c.bg })
+  hl(0, "DiagnosticError", { fg = c.err, bg = 'NONE' })
+  hl(0, "DiagnosticOther", { fg = c.preproc, bg = 'NONE' })
   hl(0, "DiagnosticSignHint", { link = 'DiagnosticHint' })
   hl(0, "DiagnosticSignInfo", { link = 'DiagnosticInfo' })
   hl(0, "DiagnosticSignWarn", { link = 'DiagnosticWarn' })
@@ -409,12 +411,6 @@ M.set_highlights = function(color)
   hl(0, "IndentBlanklineContextChar", { fg = c.info, bg = 'NONE' })
   hl(0, "IndentBlanklineContextStart", { fg = 'NONE', bg = 'NONE', underline=true, })
   hl(0, "IndentBlanklineChar", { fg = c.alt, bg = 'NONE' })
-  hl(0, "IndentBlanklineIndent1", { fg = c.fg, bg = 'NONE' })
-  hl(0, "IndentBlanklineIndent2", { fg = c.fg, bg = 'NONE' })
-  hl(0, "IndentBlanklineIndent3", { fg = c.fg, bg = 'NONE' })
-  hl(0, "IndentBlanklineIndent4", { fg = c.fg, bg = 'NONE' })
-  hl(0, "IndentBlanklineIndent5", { fg = c.fg, bg = 'NONE' })
-  hl(0, "IndentBlanklineIndent6", { fg = c.fg, bg = 'NONE' })
 
   -- Dashboard
   hl(0, "DashboardHeader", { fg = c.preproc, bg = 'NONE' })
@@ -531,12 +527,12 @@ M.set_highlights = function(color)
   hl(0, "GpsItemKindTypeParameter", { fg = c.info, bg = 'NONE' })
 
   -- Packer
-  hl(0, "packerString", { fg = c.hint, bg = c.bg })
-  hl(0, "packerHash", { fg = c.preproc, bg = c.bg })
-  hl(0, "packerOutput", { fg = c.preproc, bg = c.bg })
-  hl(0, "packerRelDate", { fg = c.hint, bg = c.bg })
-  hl(0, "packerSuccess", { fg = c.info, bg = c.bg })
-  hl(0, "packerStatusSuccess", { fg = c.preproc, bg = c.bg })
+  hl(0, "packerString", { fg = c.hint, bg = 'NONE' })
+  hl(0, "packerHash", { fg = c.preproc, bg = 'NONE' })
+  hl(0, "packerOutput", { fg = c.preproc, bg = 'NONE' })
+  hl(0, "packerRelDate", { fg = c.hint, bg = 'NONE' })
+  hl(0, "packerSuccess", { fg = c.success_green, bg = 'NONE' })
+  hl(0, "packerStatusSuccess", { fg = c.preproc, bg = 'NONE' })
 
   -- SymbolOutline
   hl(0, "SymbolsOutlineConnector", { fg = c.hint, bg = 'NONE' })
@@ -638,4 +634,4 @@ M.set_highlights = function(color)
   hl(0, "tomlTSProperty", { fg = c.preproc, bg = 'NONE' })
 end
 
-return M 
+return theme
