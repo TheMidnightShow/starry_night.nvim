@@ -1,14 +1,14 @@
-local color = require("starry_night.colors")
+local colors = require("starry_night.colors")
 
 local hl = vim.api.nvim_set_hl
-local theme = {}
+local M = {}
 
-theme.set_highlights = function(color)
+M.set_highlights = function(color)
   local c
   if color == "dark" then
-    c = color.dark
+    c = colors.dark
   elseif color == "light" then
-    c = color.light
+    c = colors.light
   end
 --------------------------------------------------------
 ----- Editor -------------------------------------------
@@ -633,4 +633,4 @@ theme.set_highlights = function(color)
   hl(0, "tomlTSProperty", { fg = c.preproc, bg = 'NONE' })
 end
 
-return theme
+return M
