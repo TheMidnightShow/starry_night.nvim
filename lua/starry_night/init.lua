@@ -3,14 +3,14 @@ local M = {}
 
 M.setup = function(theme)
   vim.cmd('hi clear')
-  vim.o.background = color
+  vim.o.background = 'dark'
   vim.cmd('syntax reset')
 
   vim.o.termguicolors = true
   vim.g.colors_name = 'starry_night'
 
-  local cs = require("starry_night."..theme)
-  cs.setup()
+  require("starry_night.options").setup(theme)
+
 end
 
 return M
