@@ -25,17 +25,17 @@ use { 'TheMidnightShow/starry_night.nvim' }
 ## [🖥] usage
 ```lua
 -- dark theme
-vim.cmd('colorscheme starry_nebula')
+vim.cmd[[ colorscheme starry_nebula ]]
 
 -- light theme
-vim.cmd('colorscheme starry_nova')
+vim.cmd[[ colorscheme starry_nova ]]
 ```
 
 ## [📺] preview
 
 ### starry_nebula
-![nebula](screenshots/nebula_edit.png)
+![nebula](screenshots/starry_nebula.png)
 
 ### starry_nova
-![nebula](screenshots/nova_edit.png)
+![nebula](screenshots/starry_nova.png)
 
