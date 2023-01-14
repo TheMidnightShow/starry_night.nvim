@@ -3,7 +3,7 @@ local M = {}
 
 M.setup = function(theme)
   vim.cmd('hi clear')
-  vim.o.background = 'dark'
+  vim.o.background = theme
   vim.cmd('syntax reset')
 
   vim.o.termguicolors = true
